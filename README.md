@@ -39,7 +39,7 @@ npm run preview
 >
 > | Home | Programs | News | Contact |
 > |------|----------|------|---------|
-> | ![Home]() | ![Programs](./screenshots/programs.png) | ![News](./screenshots/news.png) | ![Contact](./screenshots/contact.png) |
+> | ![Home](./screenshots/home.png) | ![Programs](./screenshots/programs.png) | ![News](./screenshots/news.png) | ![Contact](./screenshots/contact.png) |
 >
 > Include both English (LTR) and Arabic (RTL) views, plus a mobile screenshot, to show the responsive and bilingual behavior.
 
