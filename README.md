@@ -1,50 +1,54 @@
-# Faculty of Computer Science — Benha National University (React Clone)
+## Installation
 
-A React clone of https://cs.bnu.edu.eg/, matching the real site's navigation, pages, and content (programs, news, staff, student union, etc.). Built with React, React Router v7, Tailwind CSS, and i18next.
-
-## Getting started
+Requires [Node.js](https://nodejs.org/) 18+ and npm.
 
 ```bash
+# 1. Clone the repository
+git clone <your-repo-url>
+cd bnu-cs-website
+
+# 2. Install dependencies
 npm install
+```
+
+## Running Locally
+
+```bash
 npm run dev
 ```
 
-Then open http://localhost:5173
+Then open **http://localhost:5173** in your browser. The app supports hot-reload — changes to any file are reflected instantly.
 
 ## Build
 
+To create an optimized production build:
+
 ```bash
 npm run build
+```
+
+The compiled output is written to `dist/`. To preview the production build locally:
+
+```bash
 npm run preview
 ```
 
-## Pages (matching the real site's structure)
+## Screenshots
 
-- **Home** — carousel hero, latest news, programs, about preview, vision & mission
-- **About the College** (`/about`)
-- **Program Director's Speech** (`/dean-speech`)
-- **Faculty & Staff Members** (`/staff-members`)
-- **Programs** (`/programs`) + program detail pages (`/programs/:id`)
-- **News** (`/news`) + article detail pages (`/news/:id`)
-- **Contact Us** (`/contact`) — real address, embedded Google Map, contact form
-- **Bachelor Student Regulations** (`/bachelor-student-regulations`) — links to the real PDF
-- **Study Schedules**, **Exam Schedules**, **Student Guide** — mirror the real site (not yet published there either)
-- **Student Union Council** (`/student-union`)
-- **404 Not Found**
+> Add screenshots of the running app here before submitting, e.g.:
+>
+> | Home | Programs | News | Contact |
+> |------|----------|------|---------|
+> | ![Home]() | ![Programs](./screenshots/programs.png) | ![News](./screenshots/news.png) | ![Contact](./screenshots/contact.png) |
+>
+> Include both English (LTR) and Arabic (RTL) views, plus a mobile screenshot, to show the responsive and bilingual behavior.
 
-## Notes on data & images
+## Notes on Data & Content
 
-- Text content (news, programs, staff names/roles, about/dean's-speech copy) is sourced from the live site and rewritten in our own words — copyright rules mean we can't reproduce their article text verbatim.
-- Images are **hot-linked directly from `cs.bnu.edu.eg`** (same URLs the live site uses) rather than downloaded/re-hosted, since this is a class/portfolio clone, not a redistribution of their media.
-- The exact `<img>` path for the site logo couldn't be confirmed (only alt text was recoverable), so it has an automatic fallback to a plain "CS" badge if that URL turns out to be wrong — swap in the real logo file once you have it.
-- The real site's Arabic content wasn't available to scrape, so UI chrome (nav, buttons, forms, footer) is fully bilingual via `locales/`, but the actual page content (news/program/staff text) is English-only, matching what's publicly viewable.
-- "Students" in the navbar is a dropdown-only menu with no page of its own — that matches the real site (`/students` 404s there too).
+- Program, news, and staff data (names, dates, images) are sourced from the live site's public pages; descriptive text is rewritten in our own words rather than copied verbatim, in line with copyright practice.
+- Images are referenced directly from `cs.bnu.edu.eg`'s public media URLs rather than re-hosted, since this is an academic/portfolio recreation and not a redistribution of the university's media assets.
+- UI chrome (navigation, buttons, forms, footer) is fully bilingual via `locales/en` and `locales/ar`; RTL layout is applied automatically when Arabic is selected.
 
-## Features
+## License
 
-- Full client-side routing (React Router v7) with a 404 page
-- Arabic / English language switcher with RTL / LTR support for site chrome
-- Real dropdown navigation matching the live site (Home ▾, Students ▾, Programs, Contact Us, Join Us)
-- Contact form with client-side validation, embedded Google Map
-- Loading / Empty / Error state components
-- Fully responsive (mobile navbar with collapsible dropdown groups)
+This project was built for academic purposes as part of a Faculty of Computer Science coursework assignment. It is not affiliated with or endorsed by Benha National University.
