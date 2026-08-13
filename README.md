@@ -29,25 +29,92 @@ This project is a client-side, multi-page React application for a university fac
 - **Swiper** for the homepage news carousel
 - **lucide-react** for icons
 
-# Project Structure
+## 📁 Project Structure
+
+```text
 src/
-├── assets/                 # Images and icons
+├── assets/                         # Images, icons, and static assets
+│
 ├── components/
-│   ├── cards/              # NewsCard, ProgramCard, StaffCard
-│   └── ui/                 # Button, Modal, SectionTitle, Logo, NewsCarousel, states/
-├── data/                   # Real content: programs, news, staff, student union, site config
+│   ├── cards/                      # Reusable card components
+│   │   ├── NewsCard.jsx
+│   │   ├── ProgramCard.jsx
+│   │   └── StaffCard.jsx
+│   │
+│   └── ui/                         # Reusable UI components
+│       ├── Button.jsx
+│       ├── Modal.jsx
+│       ├── SectionTitle.jsx
+│       ├── Logo.jsx
+│       ├── NewsCarousel.jsx
+│       └── states/
+│
+├── data/                           # Static application data
+│   ├── programs.js
+│   ├── news.js
+│   ├── staff.js
+│   ├── studentUnion.js
+│   └── siteConfig.js
+│
 ├── layouts/
-│   ├── Navbar/             # Navbar + LanguageSwitcher
+│   ├── Navbar/
+│   │   ├── Navbar.jsx
+│   │   └── LanguageSwitcher.jsx
+│   │
 │   └── Footer/
-├── locales/
-│   ├── en/translation.json
-│   └── ar/translation.json
-├── pages/                  # One folder per page (Home, About, Programs, News, Contact, ...)
+│       └── Footer.jsx
+│
+├── locales/                        # Internationalization files
+│   ├── en/
+│   │   └── translation.json
+│   └── ar/
+│       └── translation.json
+│
+├── pages/                          # Application pages
+│   ├── Home/
+│   ├── About/
+│   ├── Programs/
+│   ├── News/
+│   ├── Contact/
+│   └── ...
+│
 ├── routes/
-│   └── AppRouter.jsx
-├── i18n.js
-├── App.jsx
-└── main.jsx
+│   └── AppRouter.jsx               # Application routing configuration
+│
+├── i18n.js                         # i18n configuration
+├── App.jsx                         # Root application component
+└── main.jsx                        # Application entry point
+```
+
+### 📌 Architecture Overview
+
+* **`assets/`** — Contains images, icons, and other static assets.
+* **`components/`** — Reusable components shared across multiple pages.
+* **`components/cards/`** — Card-based components such as news, programs, and staff.
+* **`components/ui/`** — Generic UI components and shared states.
+* **`data/`** — Centralized static content and configuration.
+* **`layouts/`** — Global layout components such as Navbar and Footer.
+* **`locales/`** — Arabic and English translation files.
+* **`pages/`** — Individual application pages, organized by feature.
+* **`routes/`** — React Router configuration and application routes.
+* **`i18n.js`** — Internationalization setup.
+* **`App.jsx`** — Root React component.
+* **`main.jsx`** — Application entry point.
+
+### 🔗 Main Paths
+
+| Path                       | Purpose              |
+| -------------------------- | -------------------- |
+| `src/assets/`              | Static assets        |
+| `src/components/`          | Reusable components  |
+| `src/data/`                | Application data     |
+| `src/layouts/`             | Global layouts       |
+| `src/locales/`             | Translation files    |
+| `src/pages/`               | Application pages    |
+| `src/routes/AppRouter.jsx` | Routing              |
+| `src/i18n.js`              | Internationalization |
+| `src/App.jsx`              | Root component       |
+| `src/main.jsx`             | Entry point          |
 
 ## Installation
 
