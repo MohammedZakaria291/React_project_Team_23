@@ -32,20 +32,20 @@ This project is a client-side, multi-page React application for a university fac
 ## Project Structure
 
 src/
-├── assets/ # Images and icons
+├── assets/                 # Images and icons
 ├── components/
-│ ├── cards/ # NewsCard, ProgramCard, StaffCard
-│ └── ui/ # Button, Modal, SectionTitle, Logo, NewsCarousel, states/
-├── data/ # Real content: programs, news, staff, student union, site config
+│   ├── cards/              # NewsCard, ProgramCard, StaffCard
+│   └── ui/                 # Button, Modal, SectionTitle, Logo, NewsCarousel, states/
+├── data/                   # Real content: programs, news, staff, student union, site config
 ├── layouts/
-│ ├── Navbar/ # Navbar + LanguageSwitcher
-│ └── Footer/
+│   ├── Navbar/             # Navbar + LanguageSwitcher
+│   └── Footer/
 ├── locales/
-│ ├── en/translation.json
-│ └── ar/translation.json
-├── pages/ # One folder per page (Home, About, Programs, News, Contact, ...)
+│   ├── en/translation.json
+│   └── ar/translation.json
+├── pages/                  # One folder per page (Home, About, Programs, News, Contact, ...)
 ├── routes/
-│ └── AppRouter.jsx
+│   └── AppRouter.jsx
 ├── i18n.js
 ├── App.jsx
 └── main.jsx
