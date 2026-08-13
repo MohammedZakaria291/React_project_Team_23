@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Inter', 'Cairo', sans-serif;
+    background-color: #f8fafc;
+    color: #1f2937;
+  }
+  [dir="rtl"] body {
+    font-family: 'Cairo', 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+.news-carousel {
+  position: relative;
+}
+
+
+
+.news-carousel-viewport {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 10px 0;
+}
+
+
+
+
+.news-carousel-track {
+  display: flex;
+
+  gap: 20px;
+
+  width: 100%;
+
+  transition: transform 700ms ease-in-out;
+}
+
+
+
+.news-carousel-slide {
+  flex: 0 0 calc(
+    (100% - 40px) / 3
+  );
+
+  min-height: 420px;
+
+  background: white;
+
+  overflow: hidden;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+
+
+.news-carousel::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100px;
+  height: 100%;
+
+  z-index: 20;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    to right,
+    white 0%,
+    rgba(255, 255, 255, 0.85) 30%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+
+
+
+.news-carousel::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 100px;
+  height: 100%;
+
+  z-index: 20;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    to left,
+    white 0%,
+    rgba(255, 255, 255, 0.85) 30%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+
+
+.news-dot {
+  width: 12px;
+  height: 12px;
+
+  padding: 0;
+
+  border-radius: 3px;
+
+  background: white;
+
+  border: 2px solid #d1d5db;
+
+  cursor: pointer;
+
+  transition:
+    all 500ms ease-in-out;
+}
+
+
+
+.news-dot-active {
+  width: 28px;
+
+  background: #08b6c9;
+
+  border-color: #08b6c9;
+}
+
+
+
+@media (max-width: 767px) {
+
+  .news-carousel::before,
+  .news-carousel::after {
+    display: none;
+  }
+
+  .news-carousel-slide {
+    flex: 0 0 100%;
+  }
+
+  .news-carousel-track {
+    gap: 0;
+  }
+
+}
