@@ -29,8 +29,7 @@ This project is a client-side, multi-page React application for a university fac
 - **Swiper** for the homepage news carousel
 - **lucide-react** for icons
 
-## Project Structure
-
+# Project Structure
 src/
 ├── assets/                 # Images and icons
 ├── components/
