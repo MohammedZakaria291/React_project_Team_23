@@ -1,7 +1,5 @@
-# Faculty of Computer Science — Benha National University
-
-A React web application recreating the official website of the Faculty of Computer Science at Benha National University (https://cs.bnu.edu.eg/), built to match its real navigation, pages, and content — implemented from scratch with modern frontend practices, reusable components, and full Arabic/English bilingual support.
-
+# Faculty of Computer Science — Benha National University Tech trek project 
+link : (https://bnuproject.netlify.app/)
 ## Project Overview
 
 This project is a client-side, multi-page React application for a university faculty, covering academic programs, news, staff, student union information, and contact details. It mirrors the structure and content of the live site while being built independently with a component-driven architecture, real i18n (Arabic/English with RTL/LTR switching), client-side routing, and responsive design tested from mobile to desktop.
